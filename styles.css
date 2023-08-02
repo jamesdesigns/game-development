@@ -26,3 +26,12 @@
 .car-right {
   background-color: lightgray;
 }
+
+button { 
+  padding: 15px 30px;
+  border-radius: 50px;
+  background-color: rgb(28, 102, 222);
+  border: none;
+  color: #fff;
+  margin-bottom: 30px;
+}
