@@ -47,3 +47,12 @@ button {
 .l4, .l5 {
   background-color: lightblue;
 }
+
+.c1 {
+  background-color: black;
+}
+
+.c2, 
+.c3 {
+  background-color: lightgray;
+}
