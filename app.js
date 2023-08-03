@@ -4,5 +4,7 @@ const startPauseButton = document.querySelector('#start-pause-button');
 const squares = document.querySelectorAll('.grid div');
 
 function moveCharacter() {
-  
+  console.log('moved')
 }
+
+document.addEventListener('keyup', moveCharacter);
