@@ -27,3 +27,9 @@ function moveCharacter(e) {
 }
 
 document.addEventListener('keyup', moveCharacter);
+
+function moveLogLeft() {
+  switch(true) {
+    
+  }
+}
