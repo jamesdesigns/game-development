@@ -11,16 +11,16 @@ function moveCharacter(e) {
 
   switch(e.key) {
     case 'ArrowLeft' : 
-      currentIndex =- 1
+      if (currentIndex % width !== 0) currentIndex -= 1
       break
     case 'ArrowRight' : 
-      currentIndex += 1
+      if (currentIndex % width < width -1) currentIndex += 1
       break
     case 'ArrowUp' : 
-      currentIndex -= width
+      if (currentIndex - width >= 0) currentIndex-= width
       break  
     case 'ArrowDown' : 
-      currentIndex += width
+      if (currentIndex + width < width * width) currentIndex += width
       break       
   }
   squares[currentIndex].classList.add('character')
