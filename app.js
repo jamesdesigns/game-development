@@ -95,23 +95,15 @@ function moveCarLeft(carLeft) {
   switch(true) {
     case carLeft.classList.contains('c1') :
       carLeft.classList.remove('c1')
-      carLeft.classList.add('c5')
+      carLeft.classList.add('c2')
           break
     case carLeft.classList.contains('c2') :
       carLeft.classList.remove('c2')
-      carLeft.classList.add('c1')
+      carLeft.classList.add('c3')
           break
     case carLeft.classList.contains('c3') :
       carLeft.classList.remove('c3')
-      carLeft.classList.add('c2')
-          break
-    case carLeft.classList.contains('c4') :
-      carLeft.classList.remove('c4')
-      carLeft.classList.add('c3')
-          break
-    case carLeft.classList.contains('c5') :
-      carLeft.classList.remove('c5')
-      carLeft.classList.add('c4')
+      carLeft.classList.add('c1')
           break
   }
 }
@@ -120,7 +112,7 @@ function moveCarRight(carRight) {
   switch(true) {
     case carRight.classList.contains('c1') :
       carRight.classList.remove('c1')
-      carRight.classList.add('c5')
+      carRight.classList.add('c3')
           break
     case carRight.classList.contains('c2') :
       carRight.classList.remove('c2')
@@ -129,14 +121,6 @@ function moveCarRight(carRight) {
     case carRight.classList.contains('c3') :
       carRight.classList.remove('c3')
       carRight.classList.add('c2')
-          break
-    case carRight.classList.contains('c4') :
-      carRight.classList.remove('c4')
-      carRight.classList.add('c3')
-          break
-    case carRight.classList.contains('c5') :
-      carRight.classList.remove('c5')
-      carRight.classList.add('c4')
           break
   }
 }
