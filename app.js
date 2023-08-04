@@ -4,6 +4,8 @@ const startPauseButton = document.querySelector('#start-pause-button');
 const squares = document.querySelectorAll('.grid div');
 const logsLeft = document.querySelectorAll('.log-left');
 const logsRight = document.querySelectorAll('.log-right');
+const carsLeft = document.querySelectorAll('.car-left');
+const carsRight = document.querySelectorAll('.car-right');
 
 let currentIndex = 76;
 const width = 9;
@@ -30,7 +32,7 @@ function moveCharacter(e) {
 
 document.addEventListener('keyup', moveCharacter);
 
-function autoMoveLogs() {
+function autoMoveElements() {
   logsLeft.forEach(logLeft => moveLogLeft(logLeft))
   logsRight.forEach(logRight => moveLogRight(logRight))
 }
@@ -86,4 +88,29 @@ function moveLogRight(logRight) {
   }
 }
 
-setInterval(autoMoveLogs, 1000)
+function moveLogRight(logRight) {
+  switch(true) {
+    case logRight.classList.contains('l1') :
+          logRight.classList.remove('l1')
+          logRight.classList.add('l5')
+          break
+    case logRight.classList.contains('l2') :
+          logRight.classList.remove('l2')
+          logRight.classList.add('l1')
+          break
+    case logRight.classList.contains('l3') :
+          logRight.classList.remove('l3')
+          logRight.classList.add('l2')
+          break
+    case logRight.classList.contains('l4') :
+          logRight.classList.remove('l4')
+          logRight.classList.add('l3')
+          break
+    case logRight.classList.contains('l5') :
+          logRight.classList.remove('l5')
+          logRight.classList.add('l4')
+          break
+  }
+}
+
+setInterval(autoMoveElements, 1000)
