@@ -35,6 +35,9 @@ document.addEventListener('keyup', moveCharacter);
 function autoMoveElements() {
   logsLeft.forEach(logLeft => moveLogLeft(logLeft))
   logsRight.forEach(logRight => moveLogRight(logRight))
+  carsLeft.forEach(carLeft => moveCarLeft(carLeft))
+  carsRight.forEach(carRight => moveCarRight(carRight))
+
 }
 
 
@@ -88,27 +91,52 @@ function moveLogRight(logRight) {
   }
 }
 
-function moveLogRight(logRight) {
+function moveCarLeft(carLeft) {
   switch(true) {
-    case logRight.classList.contains('l1') :
-          logRight.classList.remove('l1')
-          logRight.classList.add('l5')
+    case carLeft.classList.contains('c1') :
+      carLeft.classList.remove('c1')
+      carLeft.classList.add('c5')
           break
-    case logRight.classList.contains('l2') :
-          logRight.classList.remove('l2')
-          logRight.classList.add('l1')
+    case carLeft.classList.contains('c2') :
+      carLeft.classList.remove('c2')
+      carLeft.classList.add('c1')
           break
-    case logRight.classList.contains('l3') :
-          logRight.classList.remove('l3')
-          logRight.classList.add('l2')
+    case carLeft.classList.contains('c3') :
+      carLeft.classList.remove('c3')
+      carLeft.classList.add('c2')
           break
-    case logRight.classList.contains('l4') :
-          logRight.classList.remove('l4')
-          logRight.classList.add('l3')
+    case carLeft.classList.contains('c4') :
+      carLeft.classList.remove('c4')
+      carLeft.classList.add('c3')
           break
-    case logRight.classList.contains('l5') :
-          logRight.classList.remove('l5')
-          logRight.classList.add('l4')
+    case carLeft.classList.contains('c5') :
+      carLeft.classList.remove('c5')
+      carLeft.classList.add('c4')
+          break
+  }
+}
+
+function moveCarRight(carRight) {
+  switch(true) {
+    case carRight.classList.contains('c1') :
+      carRight.classList.remove('c1')
+      carRight.classList.add('c5')
+          break
+    case carRight.classList.contains('c2') :
+      carRight.classList.remove('c2')
+      carRight.classList.add('c1')
+          break
+    case carRight.classList.contains('c3') :
+      carRight.classList.remove('c3')
+      carRight.classList.add('c2')
+          break
+    case carRight.classList.contains('c4') :
+      carRight.classList.remove('c4')
+      carRight.classList.add('c3')
+          break
+    case carRight.classList.contains('c5') :
+      carRight.classList.remove('c5')
+      carRight.classList.add('c4')
           break
   }
 }
