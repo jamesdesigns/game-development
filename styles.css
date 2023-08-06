@@ -22,7 +22,8 @@ h3 { margin: 0; }
   background-color: red;
 }
 .starting-block {
-  background-color: blue;
+  /* background-color: blue; */
+  background-color: transparent !important;
 }
 /* .log-left,
 .log-right {
@@ -65,6 +66,8 @@ button {
 }
 
 .character {
-  background: url('sanic.png');
+  background: url('sanic.png') transparent;
+  background-color: transparent;
   background-size: 85px 85px;
+  background-blend-mode: multiply;
 }
