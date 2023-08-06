@@ -65,7 +65,6 @@ button {
 }
 
 .character {
-  /* background-color: green; */
   background: url('sanic.png');
   background-size: 85px 85px;
 }
