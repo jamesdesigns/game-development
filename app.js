@@ -10,6 +10,7 @@ const carsRight = document.querySelectorAll('.car-right');
 let currentIndex = 76;
 const width = 9;
 let timerId
+let outcomeTimerId 
 let currentTime = 20
 
 function moveCharacter(e) {
@@ -41,6 +42,9 @@ function autoMoveElements() {
   logsRight.forEach(logRight => moveLogRight(logRight))
   carsLeft.forEach(carLeft => moveCarLeft(carLeft))
   carsRight.forEach(carRight => moveCarRight(carRight))
+}
+
+function checkOutComes() {
   lose()
   win()
 }
@@ -139,16 +143,18 @@ function lose() {
     ) {
     resultDisplay.textContent = 'You Lose!'
     clearInterval(timerId)
+    clearInterval(outcomeTimerId)
     squares[currentIndex].classList.remove('character')
     document.removeEventListener('keyup', moveCharacter)
   }
 }
 
 function win() {
-  if (square[currentIndex].classList.contains('ending-block')
+  if (squares[currentIndex].classList.contains('ending-block')
   ) {
     resultDisplay.textContent = 'You Win!'
     clearInterval(timerId)
+    clearInterval(outcomeTimerId)
     document.removeEventListener('keyup', moveCharacter)
   }
 }
@@ -156,8 +162,13 @@ function win() {
 startPauseButton.addEventListener('click', () => {
   if (timerId) {
     clearInterval(timerId)
+    clearInterval(outcomeTimerId)
+    outcomeTimerId = null
+    timerId = null
+    document.removeEventListener('keyup', moveCharacter);
   } else {
     timerId = setInterval(autoMoveElements, 1000)
+    outcomeTimerId = setInterval(checkOutComes, 50)
     document.addEventListener('keyup', moveCharacter);
   }
 })
