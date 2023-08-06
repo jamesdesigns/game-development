@@ -32,7 +32,7 @@ function moveCharacter(e) {
   squares[currentIndex].classList.add('character')
 }
 
-document.addEventListener('keyup', moveCharacter);
+
 
 function autoMoveElements() {
   currentTime--
@@ -134,7 +134,8 @@ function lose() {
   if(
     squares[currentIndex].classList.contains('c1') ||
     squares[currentIndex].classList.contains('l4') ||
-    squares[currentIndex].classList.contains('l5')
+    squares[currentIndex].classList.contains('l5') ||
+    currentTime <= 0
     ) {
     resultDisplay.textContent = 'You Lose!'
     clearInterval(timerId)
@@ -152,4 +153,11 @@ function win() {
   }
 }
 
-timerId = setInterval(autoMoveElements, 1000)
+startPauseButton.addEventListener('click', () => {
+  if (timerId) {
+    clearInterval(timerId)
+  } else {
+    timerId = setInterval(autoMoveElements, 1000)
+    document.addEventListener('keyup', moveCharacter);
+  }
+})
