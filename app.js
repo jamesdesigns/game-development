@@ -9,6 +9,7 @@ const carsRight = document.querySelectorAll('.car-right');
 
 let currentIndex = 76;
 const width = 9;
+let timerId
 
 function moveCharacter(e) {
   squares[currentIndex].classList.remove('character')
@@ -125,4 +126,13 @@ function moveCarRight(carRight) {
   }
 }
 
-setInterval(autoMoveElements, 1000)
+function lose() {
+  if(squares[currentIndex].classList.contains('c1')) {
+    resultDisplay.textContent = 'You Lose!'
+    clearInterval(timerId)
+    squares[currentIndex].classList.remove('character')
+    document.removeEventListener('keyup', moveCharacter)
+  }
+}
+
+timerId = setInterval(autoMoveElements, 1000)
