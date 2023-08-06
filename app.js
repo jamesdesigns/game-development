@@ -10,6 +10,7 @@ const carsRight = document.querySelectorAll('.car-right');
 let currentIndex = 76;
 const width = 9;
 let timerId
+let currentTime = 20
 
 function moveCharacter(e) {
   squares[currentIndex].classList.remove('character')
@@ -34,11 +35,14 @@ function moveCharacter(e) {
 document.addEventListener('keyup', moveCharacter);
 
 function autoMoveElements() {
+  currentTime--
+  timeLeftDisplay.textContent = currentTime
   logsLeft.forEach(logLeft => moveLogLeft(logLeft))
   logsRight.forEach(logRight => moveLogRight(logRight))
   carsLeft.forEach(carLeft => moveCarLeft(carLeft))
   carsRight.forEach(carRight => moveCarRight(carRight))
   lose()
+  win()
 }
 
 
@@ -135,6 +139,15 @@ function lose() {
     resultDisplay.textContent = 'You Lose!'
     clearInterval(timerId)
     squares[currentIndex].classList.remove('character')
+    document.removeEventListener('keyup', moveCharacter)
+  }
+}
+
+function win() {
+  if (square[currentIndex].classList.contains('ending-block')
+  ) {
+    resultDisplay.textContent = 'You Win!'
+    clearInterval(timerId)
     document.removeEventListener('keyup', moveCharacter)
   }
 }
