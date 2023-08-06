@@ -1,5 +1,6 @@
 /* Stylesheet */
 
+h3 { margin: 0; }
 .game-controllers {
   text-align: center;
 }
@@ -38,6 +39,7 @@ button {
   background-color: rgb(28, 102, 222);
   border: none;
   color: #fff;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 
@@ -63,5 +65,7 @@ button {
 }
 
 .character {
-  background-color: green;
+  /* background-color: green; */
+  background: url('sanic.png');
+  background-size: 85px 85px;
 }
