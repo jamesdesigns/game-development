@@ -71,7 +71,11 @@ button {
 }
 
 .l4, .l5 {
-  background-color: lightblue;
+  /* background-color: lightblue; */
+  background: url('water.jpg') transparent;
+  background-color: transparent;
+  background-size: 85px 85px;
+  background-blend-mode: multiply;
 }
 
 .c1 {
