@@ -1,14 +1,23 @@
 /* Stylesheet */
 
-h3 { margin: 0; }
+body { background-color: black;}
+
+h3 { margin: 0; color: white; }
 .game-controllers {
   text-align: center;
 }
 
-#result { font-size: 5rem; }
+#result { 
+  font-size: 5rem; 
+  position: absolute;
+  top: 0;
+  left: 15px;
+  color: white;
+}
 .grid {
   display: flex;
   flex-wrap: wrap;
+  background-color: white;
   border: 1px solid black;
   width: 720px;
   height: 720px;
