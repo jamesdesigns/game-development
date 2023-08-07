@@ -14,6 +14,13 @@ h3 { margin: 0; color: white; }
   left: 15px;
   color: white;
 }
+
+.grass {
+  background: url('grass.jpg') transparent;
+  background-color: transparent;
+  background-size: 85px 85px;
+  background-blend-mode: multiply;
+}
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -78,7 +85,7 @@ button {
 
 .character {
   /* background: url('knuckles.png') transparent; */
-  background: url('sanic-2.png') transparent;
+  background: url('knuckles.png') transparent;
   background-color: transparent;
   background-size: 85px 85px;
   background-blend-mode: multiply;
