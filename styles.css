@@ -21,6 +21,13 @@ h3 { margin: 0; color: white; }
   background-size: 85px 85px;
   background-blend-mode: multiply;
 }
+.time-session {
+  font-size: 3rem; 
+  position: absolute;
+  top: 0;
+  right: 15px;
+  color: white;
+}
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -67,7 +74,11 @@ button {
 } */
 
 .l1, .l2, .l3 {
-  background-color: brown;
+  /* background-color: brown; */
+  background: url('wood.jpg') transparent;
+  background-color: transparent;
+  background-size: 85px 85px;
+  background-blend-mode: multiply;
 }
 
 .l4, .l5 {
@@ -79,12 +90,16 @@ button {
 }
 
 .c1 {
-  background-color: black;
+  /* background-color: black; */
+  background: url('yellow-car.jpg') transparent;
+  background-color: transparent;
+  background-size: 85px 85px;
+  background-blend-mode: multiply;
 }
 
 .c2, 
 .c3 {
-  background-color: lightgrey;
+  background-color: #7c7c7c;
 }
 
 .character {

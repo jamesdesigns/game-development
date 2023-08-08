@@ -11,7 +11,7 @@ let currentIndex = 76;
 const width = 9;
 let timerId
 let outcomeTimerId 
-let currentTime = 20
+let currentTime = 30
 
 function moveCharacter(e) {
   squares[currentIndex].classList.remove('character')
