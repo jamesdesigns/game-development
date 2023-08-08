@@ -8,14 +8,20 @@ body {
 h3 { margin: 0; color: white; }
 
 .game-controllers {
-  text-align: center;
+  display: flex;
+  width: 720px;
+  /* text-align: center; */
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
 }
 
 #result { 
   font-size: 2rem; 
-  position: absolute;
+  /* position: absolute;
   bottom: 25px;
-  left: 350px;
+  left: 350px; */
+
   color: white;
 }
 
@@ -27,9 +33,10 @@ h3 { margin: 0; color: white; }
 }
 .time-session {
   font-size: 2rem; 
-  position: absolute;
+  /* position: absolute;
   bottom: 25px;
-  right: 325px;
+  right: 325px; */
+  padding-left: 10%;
   color: white;
 }
 .grid {
@@ -71,11 +78,10 @@ button {
   background-color: rgb(28, 102, 222);
   border: none;
   color: #fff;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  position: absolute;
+  margin: 10px 10% 10px 10%;
+  /* position: absolute;
   bottom: 0px;
-  left: 45%;
+  left: 45%; */
 }
 
 /* .character {

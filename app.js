@@ -135,12 +135,7 @@ function moveCarRight(carRight) {
 }
 
 function lose() {
-  const explosion = document.getElementById('explosion');
-  explosion.style.display = 'block';
-  explosion.setAttribute('id', 'explosion'); // Append an id of explosion 
-  setTimeout(function() {
-    explosion.style.backgroundImage = 'url("images/explode.gif")';
-  }, 500);
+
 
   if(
     squares[currentIndex].classList.contains('c1') ||
@@ -148,6 +143,14 @@ function lose() {
     squares[currentIndex].classList.contains('l5') ||
     currentTime <= 0
     ) {
+
+      const explosion = document.getElementById('explosion');
+      explosion.style.display = 'block';
+      explosion.setAttribute('id', 'explosion'); // Append an id of explosion 
+      setTimeout(function() {
+        explosion.style.backgroundImage = 'url("images/explode.gif")';
+      }, 500);
+
     resultDisplay.textContent = 'You Lose!'
     clearInterval(timerId)
     clearInterval(outcomeTimerId)
