@@ -47,7 +47,6 @@ h3 { margin: 0; color: white; }
   background-color: red;
 }
 .starting-block {
-  /* background-color: blue; */
   background-color: transparent !important;
 }
 /* .log-left,
@@ -74,7 +73,6 @@ button {
 } */
 
 .l1, .l2, .l3 {
-  /* background-color: brown; */
   background: url('wood.jpg') transparent;
   background-color: transparent;
   background-size: 85px 85px;
@@ -82,7 +80,6 @@ button {
 }
 
 .l4, .l5 {
-  /* background-color: lightblue; */
   background: url('water.jpg') transparent;
   background-color: transparent;
   background-size: 85px 85px;
@@ -90,7 +87,6 @@ button {
 }
 
 .c1 {
-  /* background-color: black; */
   background: url('yellow-car.jpg') transparent;
   background-color: transparent;
   background-size: 85px 85px;
@@ -103,7 +99,6 @@ button {
 }
 
 .character {
-  /* background: url('knuckles.png') transparent; */
   background: url('knuckles.png') transparent;
   background-color: transparent;
   background-size: 85px 85px;
