@@ -1,16 +1,20 @@
 /* Stylesheet */
 
-body { background-color: black;}
+body { 
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 h3 { margin: 0; color: white; }
+
 .game-controllers {
   text-align: center;
 }
 
 #result { 
-  font-size: 5rem; 
+  font-size: 3rem; 
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 15px;
   color: white;
 }
@@ -24,8 +28,8 @@ h3 { margin: 0; color: white; }
 .time-session {
   font-size: 3rem; 
   position: absolute;
-  top: 0;
-  right: 15px;
+  top: 5px;
+  right: 20px;
   color: white;
 }
 .grid {
@@ -99,7 +103,7 @@ button {
 }
 
 .character {
-  background: url('knuckles.png') transparent;
+  background: url('sanic-walking.gif') transparent;
   background-color: transparent;
   background-size: 85px 85px;
   background-blend-mode: multiply;
