@@ -12,24 +12,24 @@ h3 { margin: 0; color: white; }
 }
 
 #result { 
-  font-size: 3rem; 
+  font-size: 2rem; 
   position: absolute;
-  top: 5px;
-  left: 15px;
+  bottom: 25px;
+  left: 350px;
   color: white;
 }
 
 .grass {
-  background: url('grass.jpg') transparent;
+  background: url('images/grass.jpg') transparent;
   background-color: transparent;
   background-size: 85px 85px;
   background-blend-mode: multiply;
 }
 .time-session {
-  font-size: 3rem; 
+  font-size: 2rem; 
   position: absolute;
-  top: 5px;
-  right: 20px;
+  bottom: 25px;
+  right: 325px;
   color: white;
 }
 .grid {
@@ -39,7 +39,7 @@ h3 { margin: 0; color: white; }
   border: 1px solid black;
   width: 720px;
   height: 720px;
-  margin: 0 auto;
+  margin: 25px auto 0;
 }
 
 .grid div {
@@ -48,10 +48,10 @@ h3 { margin: 0; color: white; }
 }
 
 .ending-block {
-  background-color: red;
+  background-color: black;
 }
 .starting-block {
-  background-color: transparent !important;
+  background-color: black;
 }
 /* .log-left,
 .log-right {
@@ -65,13 +65,16 @@ h3 { margin: 0; color: white; }
 button { 
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 800;
-  padding: 15px 30px;
+  padding: 20px 30px;
   border-radius: 50px;
   background-color: rgb(28, 102, 222);
   border: none;
   color: #fff;
   margin-top: 10px;
   margin-bottom: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 585px;
 }
 
 /* .character {
@@ -79,21 +82,21 @@ button {
 } */
 
 .l1, .l2, .l3 {
-  background: url('wood.jpg') transparent;
+  background: url('images/wood.jpg') transparent;
   background-color: transparent;
   background-size: 85px 85px;
   background-blend-mode: multiply;
 }
 
 .l4, .l5 {
-  background: url('water.jpg') transparent;
+  background: url('images/water.jpg') transparent;
   background-color: transparent;
   background-size: 85px 85px;
   background-blend-mode: multiply;
 }
 
 .c1 {
-  background: url('yellow-car.jpg') transparent;
+  background: url('images/yellow-car.jpg') transparent;
   background-color: transparent;
   background-size: 85px 85px;
   background-blend-mode: multiply;
@@ -105,7 +108,7 @@ button {
 }
 
 .character {
-  background: url('sanic-walking.gif') transparent;
+  background: url('images/sanic-walking.gif') transparent;
   background-color: transparent;
   background-size: 85px 85px;
   background-blend-mode: multiply;
