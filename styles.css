@@ -64,6 +64,7 @@ h3 { margin: 0; color: white; }
 
 button { 
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
   font-weight: 800;
   padding: 20px 30px;
   border-radius: 50px;
@@ -73,8 +74,8 @@ button {
   margin-top: 10px;
   margin-bottom: 10px;
   position: absolute;
-  bottom: 10px;
-  left: 585px;
+  bottom: 0px;
+  left: 45%;
 }
 
 /* .character {

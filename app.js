@@ -135,6 +135,12 @@ function moveCarRight(carRight) {
 }
 
 function lose() {
+  const explosion = document.getElementById('explosion');
+  explosion.style.display = 'block';
+  setTimeout(function() {
+    explosion.style.backgroundImage = 'url("images/explode.gif")';
+  }, 500);
+
   if(
     squares[currentIndex].classList.contains('c1') ||
     squares[currentIndex].classList.contains('l4') ||
@@ -147,6 +153,8 @@ function lose() {
     squares[currentIndex].classList.remove('character')
     document.removeEventListener('keyup', moveCharacter)
   }
+
+
 }
 
 function win() {
