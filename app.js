@@ -1,17 +1,19 @@
-const timeLeftDisplay = document.querySelector('#time-left');
-const resultDisplay = document.querySelector('#result');
-const startPauseButton = document.querySelector('#start-pause-button');
-const squares = document.querySelectorAll('.grid div');
-const logsLeft = document.querySelectorAll('.log-left');
-const logsRight = document.querySelectorAll('.log-right');
-const carsLeft = document.querySelectorAll('.car-left');
-const carsRight = document.querySelectorAll('.car-right');
+const timeLeftDisplay = document.querySelector('#time-left')
+const resultDisplay = document.querySelector('#result')
+const startPauseButton = document.querySelector('#start-pause-button')
+const squares = document.querySelectorAll('.grid div')
+const logsLeft = document.querySelectorAll('.log-left')
+const logsRight = document.querySelectorAll('.log-right')
+const carsLeft = document.querySelectorAll('.car-left')
+const carsRight = document.querySelectorAll('.car-right')
+const character = document.getElementById("character");
 
-let currentIndex = 76;
-const width = 9;
+let currentIndex = 76
+const width = 9
 let timerId
 let outcomeTimerId 
 let currentTime = 30
+let score = 0
 
 function moveCharacter(e) {
   squares[currentIndex].classList.remove('character')
@@ -33,6 +35,27 @@ function moveCharacter(e) {
   squares[currentIndex].classList.add('character')
 }
 
+// Check for collisions with coins and update score
+function checkCollisions() {
+  characterRect = character.getBoundingClientRect();
+
+  coins.forEach((coin) => {
+    coinRect = coin.getBoundingClientRect();
+
+    if (
+      characterRect.left < coinRect.right &&
+      characterRect.right > coinRect.left &&
+      characterRect.top < coinRect.bottom &&
+      characterRect.bottom > coinRect.top
+    ) {
+      // Frog collided with a coin
+      coin.style.display = "none"; // Remove the collected coin
+      score += 10; // Increase the score
+      updateScore(); // Update the displayed score
+    }
+  });
+}
+
 
 
 function autoMoveElements() {
@@ -47,6 +70,12 @@ function autoMoveElements() {
 function checkOutComes() {
   lose()
   win()
+}
+
+// Update the displayed score
+function updateScore() {
+  const scoreElement = document.getElementById("score");
+  scoreElement.textContent = "Score: " + score;
 }
 
 

@@ -10,7 +10,6 @@ h3 { margin: 0; color: white; }
 .game-controllers {
   display: flex;
   width: 720px;
-  /* text-align: center; */
   margin: 0 auto;
   align-items: center;
   justify-content: center;
@@ -18,10 +17,6 @@ h3 { margin: 0; color: white; }
 
 #result { 
   font-size: 2rem; 
-  /* position: absolute;
-  bottom: 25px;
-  left: 350px; */
-
   color: white;
 }
 
@@ -33,9 +28,6 @@ h3 { margin: 0; color: white; }
 }
 .time-session {
   font-size: 2rem; 
-  /* position: absolute;
-  bottom: 25px;
-  right: 325px; */
   padding-left: 10%;
   color: white;
 }
@@ -60,10 +52,7 @@ h3 { margin: 0; color: white; }
 .starting-block {
   background-color: black;
 }
-/* .log-left,
-.log-right {
-  background-color: lightblue;
-} */
+
 .car-left,
 .car-right {
   background-color: lightgray;
@@ -79,14 +68,10 @@ button {
   border: none;
   color: #fff;
   margin: 10px 10% 10px 10%;
-  /* position: absolute;
+  position: inherit;
   bottom: 0px;
-  left: 45%; */
+  left: 45%; 
 }
-
-/* .character {
-  background-color: green;
-} */
 
 .l1, .l2, .l3 {
   background: url('images/wood.jpg') transparent;
