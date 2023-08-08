@@ -137,6 +137,7 @@ function moveCarRight(carRight) {
 function lose() {
   const explosion = document.getElementById('explosion');
   explosion.style.display = 'block';
+  explosion.setAttribute('id', 'explosion'); // Append an id of explosion 
   setTimeout(function() {
     explosion.style.backgroundImage = 'url("images/explode.gif")';
   }, 500);
