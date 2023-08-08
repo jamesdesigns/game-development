@@ -63,6 +63,8 @@ h3 { margin: 0; color: white; }
 }
 
 button { 
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
   padding: 15px 30px;
   border-radius: 50px;
   background-color: rgb(28, 102, 222);
