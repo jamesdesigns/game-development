@@ -26,6 +26,17 @@ h3 { margin: 0; color: white; }
   background-size: 85px 85px;
   background-blend-mode: multiply;
 }
+.game-element {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-color: gray;
+}
+.coin {
+  background-color: yellow;
+  z-index: 999;
+  /* Add coin styling */
+}
 .time-session {
   font-size: 2rem; 
   padding-left: 10%;
