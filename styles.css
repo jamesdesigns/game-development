@@ -16,12 +16,16 @@ h3 { margin: 0; color: white; }
 }
 
 #result { 
-  font-size: 2rem; 
+  font-size: 5rem; 
   color: white;
+  position: absolute;
+  top: 15px;
+  left: 15px;
 }
 #score {
   font-size: 2rem; 
   color: white;
+  padding-left: 5%;
 }
 
 .grass {
