@@ -7,13 +7,14 @@ const logsRight = document.querySelectorAll('.log-right')
 const carsLeft = document.querySelectorAll('.car-left')
 const carsRight = document.querySelectorAll('.car-right')
 const character = document.getElementById("character");
+const coins = document.querySelectorAll(".coin");
 
 let currentIndex = 76
 const width = 9
 let timerId
 let outcomeTimerId 
 let currentTime = 30
-let score = 0
+var score = 0
 
 function moveCharacter(e) {
   squares[currentIndex].classList.remove('character')
@@ -33,27 +34,6 @@ function moveCharacter(e) {
       break       
   }
   squares[currentIndex].classList.add('character')
-}
-
-// Check for collisions with coins and update score
-function checkCollisions() {
-  characterRect = character.getBoundingClientRect();
-
-  coins.forEach((coin) => {
-    coinRect = coin.getBoundingClientRect();
-
-    if (
-      characterRect.left < coinRect.right &&
-      characterRect.right > coinRect.left &&
-      characterRect.top < coinRect.bottom &&
-      characterRect.bottom > coinRect.top
-    ) {
-      // Frog collided with a coin
-      coin.style.display = "none"; // Remove the collected coin
-      score += 10; // Increase the score
-      updateScore(); // Update the displayed score
-    }
-  });
 }
 
 
@@ -76,6 +56,14 @@ function checkOutComes() {
 function updateScore() {
   const scoreElement = document.getElementById("score");
   scoreElement.textContent = "Score: " + score;
+  console.log(score);
+}
+
+// Example function to increase the score
+function increaseScore(points) {
+  score += points;
+  updateScore();
+  console.log(score);
 }
 
 
@@ -164,8 +152,6 @@ function moveCarRight(carRight) {
 }
 
 function lose() {
-
-
   if(
     squares[currentIndex].classList.contains('c1') ||
     squares[currentIndex].classList.contains('l4') ||
@@ -185,9 +171,8 @@ function lose() {
     clearInterval(outcomeTimerId)
     squares[currentIndex].classList.remove('character')
     document.removeEventListener('keyup', moveCharacter)
+    checkCollisions()
   }
-
-
 }
 
 function win() {
@@ -197,6 +182,7 @@ function win() {
     clearInterval(timerId)
     clearInterval(outcomeTimerId)
     document.removeEventListener('keyup', moveCharacter)
+    increaseScore()
   }
 }
 
@@ -213,3 +199,27 @@ startPauseButton.addEventListener('click', () => {
     document.addEventListener('keyup', moveCharacter);
   }
 })
+
+// Check for collisions with coins and update score
+function checkCollisions() {
+  characterRect = character.getBoundingClientRect();
+
+  coins.forEach((coin) => {
+    coinRect = coin.getBoundingClientRect();
+
+    if (
+      characterRect.left < coinRect.right &&
+      characterRect.right > coinRect.left &&
+      characterRect.top < coinRect.bottom &&
+      characterRect.bottom > coinRect.top
+    ) {
+      // Frog collided with a coin
+      coin.style.display = "none"; // Remove the collected coin
+      score += 10; // Increase the score
+      updateScore(); // Update the displayed score
+    }
+  });
+}
+
+
+
