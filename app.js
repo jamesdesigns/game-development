@@ -14,7 +14,7 @@ const width = 9
 let timerId
 let outcomeTimerId 
 let currentTime = 30
-var score = 0
+let score = 0
 
 function moveCharacter(e) {
   squares[currentIndex].classList.remove('character')
@@ -54,6 +54,7 @@ function checkOutComes() {
 
 // Update the displayed score
 function updateScore() {
+  let score = 0;
   const scoreElement = document.getElementById("score");
   scoreElement.textContent = "Score: " + score;
   console.log(score);
@@ -61,6 +62,7 @@ function updateScore() {
 
 // Example function to increase the score
 function increaseScore(points) {
+  let score = 0;
   score += points;
   updateScore();
   console.log(score);
@@ -182,7 +184,7 @@ function win() {
     clearInterval(timerId)
     clearInterval(outcomeTimerId)
     document.removeEventListener('keyup', moveCharacter)
-    increaseScore()
+    increaseScore(score)
   }
 }
 
